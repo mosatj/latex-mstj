@@ -1,0 +1,21 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}%-stealth
+\draw (0.5,0) arc (0:60:0.5) ;
+\node at (0.75,0.3) {$60^{\circ}$};
+\draw (-0.5,0) arc (180:120:0.5) ;
+\node at (-0.7,0.3) {$60^{\circ}$};
+
+\draw[dashed] (-1,0) -- (1,0);
+
+\draw[-latex, very thick] (0,0)  -- node[left, near end, rotate=0] {$\overrightarrow{W}$}(0,-2);
+\draw[-latex, very thick, red](0,0) -- node[right, near end, rotate=0] {$\overrightarrow{T}_2$} (1,1.73);
+\draw[-latex, very thick, blue](0,0) -- node[left, near end, rotate=0] {$\overrightarrow{T}_1$} (-1,1.73);
+\end{tikzpicture} 
+
+
+\end{document}

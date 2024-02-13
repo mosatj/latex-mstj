@@ -1,0 +1,29 @@
+\documentclass[margin=2pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}%-stealth
+\draw[-latex, very thick, blue] (0,0) -- (-2,0);
+\node[blue] at (-2,-0.3) {\footnotesize $F\sen(22^{\circ})$};
+\draw[-latex, very thick, blue] (0,0) -- (0,-2);
+\node[blue] at (0.8,-1.6) {\footnotesize $F\cos(22^{\circ})$};
+
+\draw[-latex, very thick, black] (0,0.1) -- (0,2.2);
+\node[black] at (-0.3,2) {\footnotesize $F_{n}$};
+
+
+\draw[-latex, very thick, red] (0.1,0) -- (2,0);
+\node[red] at (1.8,0.3) {\footnotesize $F_{r}$};
+\end{tikzpicture} 
+
+
+\end{document}
+
+
+
+

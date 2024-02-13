@@ -1,0 +1,40 @@
+\documentclass[margin=2pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}%-stealth
+\draw[-latex, very thick, blue] (-0.1,0) -- (-2.5,0);
+\node[blue] at (-2.5,-0.3) {\footnotesize $600\cos(110^{\circ})$};
+\draw[-latex, very thick, blue] (-0.1,0) -- (-0.1,2.5);
+\node[blue] at (-1.1,2.3) {\footnotesize $600\sen(110^{\circ})$};
+
+\draw[-latex, very thick, red] (0.1,0) -- (2,0);
+\node[red] at (2,-0.3) {\footnotesize $300\cos(66^{\circ})$};
+\draw[-latex, very thick, red] (0.1,0) -- (0.1,-2);
+\node[red] at (1.1,-1.7) {\footnotesize $300\sen(66^{\circ})$};
+
+\draw[-latex, very thick, black] (-0.1,-0.1) -- (-0.1,-2);
+\node[black] at (-0.8,-1.5) {\footnotesize $W=30g$};
+\end{tikzpicture} 
+
+
+\end{document}
+
+
+\draw (0.5,0) arc (0:60:0.5) ;
+\node at (0.75,0.3) {$60^{\circ}$};
+\draw (-0.5,0) arc (180:120:0.5) ;
+\node at (-0.7,0.3) {$60^{\circ}$};
+
+\draw[dashed] (-1,0) -- (1,0);
+
+\draw[-latex, very thick] (0,0)  -- node[left, near end, rotate=0] {$\overrightarrow{W}$}(0,-2);
+\draw[-latex, very thick](0,0) -- node[right, near end, rotate=0] {$\overrightarrow{T}_2$} (1,1.73);
+\draw[-latex, very thick](0,0) -- node[left, near end, rotate=0] {$\overrightarrow{T}_1$} (-1,1.73);
+
+

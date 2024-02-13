@@ -1,0 +1,27 @@
+\documentclass[margin=0pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}%-stealth
+\draw[-latex, very thick, blue] (-0.1,0) -- (-0.1,2);
+\node[blue] at (-1,1.7) {\footnotesize $140\sen(60^{\circ})$};
+\draw[-latex, very thick, blue] (0.1,-0.3) -- (2,-0.3);
+\node[blue] at (2,-0.5) {\footnotesize $140\cos(60^{\circ})$};
+
+\draw[-latex, very thick, red] (0.1,0) -- (0.1,2.5);
+\node[red] at (1,2.3) {\footnotesize $200\sen(45^{\circ})$};
+\draw[-latex, very thick, red] (0.1,-0.1) -- (2.5,-0.1);
+\node[red] at (2.3,0.3) {\footnotesize $200\cos(45^{\circ})$};
+\end{tikzpicture} 
+
+
+\end{document}
+
+
+
+

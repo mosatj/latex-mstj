@@ -1,0 +1,386 @@
+\documentclass{article}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{anyfontsize}
+
+
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage{float}
+
+
+%%%Colores definidos%%%
+\definecolor{guinda}{RGB}{201,41,79}
+\definecolor{durazno}{RGB}{255,103,103}
+\definecolor{piel}{RGB}{255,177,115}
+\definecolor{amarillo}{RGB}{255,227,178}
+\definecolor{verde}{RGB}{44,106,109}
+\definecolor{gris}{RGB}{64,64,64}
+\definecolor{celeste}{RGB}{116,188,224}
+\definecolor{morado}{RGB}{114,33,146}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%Cajas de colores%%%
+\usepackage{tcolorbox}
+\usepackage{varwidth}
+\tcbuselibrary{theorems}
+\tcbuselibrary{skins}
+
+\newtcbtheorem[]{ejercicio}{Ejercicio}{enhanced, frame empty, interior empty, colframe=gray!45, coltitle=black, fonttitle=\bfseries, colbacktitle=gray!60!white, borderline={0.5mm}{0mm}{morado!15!white}, borderline={0.5mm}{0mm}{black!50!white, dashed}, attach boxed title to top left={yshift=-2mm}, boxed title style={boxrule=0.4pt},varwidth boxed title, separator sign={ }}{ejerc}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+
+\usepackage{multicol}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.5pt}
+
+
+\begin{document}
+	
+\begin{center}
+\fcolorbox{black}{gray!20}{\begin{minipage}{0.9\textwidth}
+\bfseries\Large\centering
+\vspace*{0.5cm}
+Unidad 1 -- Práctica Dirigida 1\\
+Leyes de Newton del Movimiento y Sus Aplicaciones\\
+Problemas Propuestos
+\vspace*{0.5cm}
+\end{minipage}}
+\end{center}
+	
+	
+\vspace*{1cm}
+
+\begin{ejercicio}{}{}
+La bacteria Escherichia coli (o E.coli) es un organismo unicelular que vive en el intestino de los seres humanos y los animales sanos. Cuando se cultiva en un medio uniforme rica en sales y aminoácidos, estas bacterias nadan a lo largo de caminos en zig-zag a una velocidad constante de $20 \mu\;m/s$. 
+\begin{center}
+\includegraphics[scale=0.35]{img/1.png}	
+\end{center}
+La gráfica muestra la trayectoria de un E. coli medida que se mueve desde el punto A al punto E. Cada segmento del movimiento puede ser identificado por dos letras, como segmento AB, BC, CD, DE. 
+\begin{enumerate}[a)]
+\item Calcular la distancia total recorrida y la magnitud del desplazamiento neto para todo el movimiento
+\item ¿Cuáles será la magnitud de la velocidad media de la bacteria durante todo el viaje?
+\end{enumerate}
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+\begin{enumerate}[a)]
+\item Consideramos los vectores y sus respectivas distancias
+\begin{align*}
+\overrightarrow{AB}&=(50;10) & &\rightarrow & D_{AB}&=\sqrt{(50)^2+(10)^2}=10\sqrt{26}\\
+\overrightarrow{BC}&=(0;10) & &\rightarrow & D_{BC}&=10\\
+\overrightarrow{CD}&=(40;10) & &\rightarrow & D_{CD}&=\sqrt{(40)^2+(10)^2}=10\sqrt{17}\\
+\overrightarrow{DE}&=(-50;-50) & &\rightarrow & D_{DE}&=50\sqrt{2}	
+\end{align*}
+
+De esta manera, el vector resultante para la distancia total recorrida es:
+$$\overrightarrow{R}=\overrightarrow{AB}+\overrightarrow{BC}+\overrightarrow{CD}+\overrightarrow{DE}=(40;-20)$$
+Y la magnitud del desplazamiento neto para todo el movimiento es
+$$D_{\textrm{Total}}=\sqrt{(40)^2+(20)^2}=20\sqrt{5}\;\mu\,m$$
+Así también, el tiempo total es obtenido dividiendo la distancia con la velocidad (el cual es constante) en cada tramo
+$$t_{\textrm{Total}}=t_{AB}+t_{BC}+t_{CD}+t_{DE} =\dfrac{10\sqrt{6}}{20}+ \dfrac{10}{20}+ \dfrac{10\sqrt{17}}{20}+ \dfrac{50\sqrt{2}}{20}\;s$$ 
+\item La velocidad media es 
+$$V_{\textrm{media}}=\dfrac{D_{\textrm{Total}}}{t_{Total}}=\dfrac{20\sqrt{5}}{\dfrac{10\sqrt{26}+10+10\sqrt{17}+50\sqrt{2}}{20}}\approx 5,17\;\mu\,m/s$$
+\end{enumerate}
+
+
+\begin{ejercicio}{}{}
+¿Cuál es la magnitud que registra los dinamómetros $T_1$ y $T_2$?
+\begin{center}
+\includegraphics[scale=0.35]{img/2.png}	
+\end{center}
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+El diagrama de cuerpo libre es
+\begin{center}
+\includegraphics[scale=1.1]{gph/dcl-1}
+\hspace*{0.5cm}	
+\includegraphics[scale=1.1]{gph/dcl-2}
+\end{center}
+
+Dado que el sistema se encuentra en equilibrio, se tiene
+\begin{itemize}
+\item para las fuerzas en la componente horizontal
+$$T_1 \cos(60^{\circ})= T_2\cos(60^{\circ})\rightarrow T_1=T_2$$
+\item para las fuerzas en la componente vertical
+$$(T_1+T_2)\sen(60^{\circ})= 9g\rightarrow T_1=\dfrac{9g}{2\sen(60^{\circ})}=T_2\approx 11,32\;N$$
+\end{itemize}
+
+
+\begin{ejercicio}{}{}
+¿Cuál es la fuerza resultante ejercida sobre la camilla, (magnitud y dirección)?
+\begin{center}
+\includegraphics[scale=0.4]{img/3.png}	
+\end{center}
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+El diagrama de cuerpo libre es
+\begin{center}
+\includegraphics[scale=1.1]{gph/dcl-3}
+\hspace*{0.5cm}	
+\includegraphics[scale=1.1]{gph/dcl-4}
+\end{center}
+
+La resultante viene determinada por 
+\begin{itemize}
+\item la componente horizontal $R_{x}= 200\cos(45^{\circ})+ 140\cos(60^{\circ})= 100\sqrt{2}+70$
+\item la componente vertical $R_{y}= 200\sen(45^{\circ})+ 140\sen(60^{\circ})= 100\sqrt{2}+70\sqrt{3}$
+\end{itemize}
+
+Así, el vector resultante es $\overrightarrow{R}=(100\sqrt{2}+70; 100\sqrt{2}+70\sqrt{3})$, y su magnitud es
+$$|\overrightarrow{R}|=\sqrt{(100\sqrt{2}+70)^2+(100\sqrt{2}+70\sqrt{3})^2}\approx 337,18\;N$$
+
+
+\begin{ejercicio}{}{}
+La pelvis de la figura tiene una masa de $30\;kg$. Determinar su aceleración.
+\begin{center}
+\includegraphics[scale=0.35]{img/4.png}
+\end{center}
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+El diagrama de cuerpo libre es
+\begin{center}
+\includegraphics[scale=1.1]{gph/dcl-5}
+\hspace*{0.5cm}	
+\includegraphics[scale=1.1]{gph/dcl-6}
+\end{center}
+
+La resultante viene determinada por 
+\begin{itemize}
+\item la componente horizontal $F_{R_{x}}= 300\cos(66^{\circ})-600\cos(110^{\circ})\approx 327,23$
+\item la componente vertical $F_{R_{y}}= 600\sen(110^{\circ}) -30g-300\sen(66^{\circ})\approx -4,25$
+\end{itemize}
+
+Así, el vector resultante es $\overrightarrow{F}_{R}=(327,23; -4,25)$. Utilizando la segunda Ley de Newton se tiene
+$$\overrightarrow{F}_{R}=m\overrightarrow{a}\rightarrow \overrightarrow{a}=(10,91;-0,14)\rightarrow a\approx 10.91\;m/s^2$$
+
+
+\begin{ejercicio}{}{}
+Una enfermera en un hospital está empujando una camilla con un enfermo de $150\;kg$ a velocidad constante con una fuerza de $480\;N$ formando un ángulo por encima de la horizontal, la fuerza de fricción de la camilla con el piso es de $400\;N$. 
+\begin{enumerate}[a)]
+\item ¿Qué ángulo hace la fuerza aplicada con la horizontal?
+\item ¿Cuál es la magnitud de la fuerza normal que ejerce el suelo a la camilla?
+\end{enumerate}
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+El diagrama de cuerpo libre es
+\begin{center}
+\includegraphics[scale=1.65]{gph/dcl-7}
+\hspace*{0.5cm}	
+\includegraphics[scale=1.1]{gph/dcl-8}
+\end{center}
+
+De acuerdo a ello se tiene que
+\begin{enumerate}[a)]
+\item Analizando las componentes horizontales se tiene que
+$$480\cos(\theta)=400\rightarrow \theta=\arcsen(400/480)\approx 33,56^{\circ}$$
+\item Las componentes verticales se cancelan mutuamente, por lo cual la magnitud de la fuerza normal que ejerce el suelo a la camilla es determinado por
+$$F_{n_1}+F_{n_2}=150g+480\sen(\theta)\approx 1873,26\;N$$
+\end{enumerate}
+
+
+\begin{ejercicio}{}{}
+Un gráfico algo idealizado de la velocidad de la sangre en la aorta de forma ascendente durante un latido del corazón está graficado en la siguiente figura:
+\begin{center}
+\includegraphics[scale=0.4]{img/5}	
+\end{center}
+\begin{enumerate}[a)]
+\item ¿Aproximadamente cuán lejos se mueve la sangre durante un latido? (en cm)
+\item Suponga datos similares para el movimiento de la sangre en la aorta, la distancia desde el corazón hasta el cerebro es de $30\;cm$. Calcular el número de latidos del corazón que lleva a la sangre viajar desde el corazón hasta el cerebro
+\end{enumerate}
+\end{ejercicio}
+
+\newpage
+
+\underline{\textbf{Solución}}:
+
+\begin{enumerate}[a)]
+\item Se tendrá en cuenta el desplazamiento vertical, considerando las ecuaciones para el movimiento vertical
+$$\Delta y=V_{oy}\Delta t+\dfrac{1}{2}a\Delta t^2\ \wedge V_{oy}=0\ \rightarrow\ \Delta y=\dfrac{1}{2}a\Delta t^2$$
+
+Dado que $a=\Delta V/\Delta t$, entonces
+$$\Delta y=\dfrac{1}{2}\dfrac{\Delta V}{\Delta t}\cdot \Delta t^2=\dfrac{1}{2}\Delta V\cdot \Delta t$$
+Tomando $\Delta V=V_{\textrm{max}}=0,8$ y $\Delta t=0,2$, entonces
+$$\Delta y=\dfrac{1}{2}(0,8)(0,2)=0,08\;m=8\;cm$$
+Por tanto la altura máxima alcanzada durante un latido es de $8\;cm$.
+
+\item Se utilizará una regla de tres simple directa
+\begin{center}
+\begin{tabular}{cp{1cm}c}
+N$^{\circ}$ Latidos & & Distancia\\
+1 latido & & $8\;cm$\\	
+$x$ latidos & & $30\;cm$\\
+\end{tabular}	
+\end{center}
+De esta forma $x=\dfrac{30}{8}=3,75\ \textrm{latidos}$.
+Por tanto, el número de latidos del corazón que lleva a la sangre viajar desde el corazón hasta el cerebro es $3,75$.
+\end{enumerate}
+
+
+\begin{ejercicio}{}{}
+La persona en la figura tiene una masa de $70\;kg$. Cada muleta hace un ángulo de $22.0^{\circ}$ con la vertical (como se ve desde el frente). La mitad del peso de la persona se soporta mediante las muletas, la otra mitad mediante las fuerzas ejercidas verticalmente por la superficie de la tierra en sus pies. 
+\begin{center}
+\includegraphics[scale=0.5]{img/6}	
+\end{center}
+Suponiendo que él está en reposo y la fuerza ejercida por la superficie de la tierra sobre las muletas actúa a lo largo de ellas, calcule
+\begin{enumerate}[a)]
+\item el coeficiente de fricción más pequeño posible entre las muletas y la superficie de la tierra
+\item la magnitud de la fuerza de compresión que soporta cada muleta
+\end{enumerate} 
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+\begin{enumerate}[a)]
+\item Realizando el DCL, para una muleta y la superficie de la tierra, se tiene
+
+\begin{minipage}{0.4\textwidth}
+\includegraphics[scale=1.1]{gph/dcl-9}	
+\end{minipage}
+\hspace*{0.5cm}	
+\begin{minipage}{0.4\textwidth}
+\begin{itemize}
+\item $\sum F_{x}=0\rightarrow F_{r}=\mu_{r}F_{n}=F\sen(22^{\circ})$
+\item $\sum F_{y}=0\rightarrow F_{n}=F\cos(22^{\circ})$ 
+\end{itemize}	
+Dividiendo ambas expresiones se tiene que 
+$$\mu_{r}=\tan(22^{\circ})\approx 0,4$$
+\end{minipage}
+
+\item Realizando el DCL, para la compresión que soporta cada muleta, y teniendo en cuenta que la fuerza normal del cuerpo $F_{n}$ reacciona solo a la mitad de la masa del cuerpo de la persona, se tiene
+
+\begin{minipage}{0.4\textwidth}
+\includegraphics[scale=1.1]{gph/dcl-10}	
+\end{minipage}
+\hspace*{0.5cm}	
+\begin{minipage}{0.4\textwidth}
+Utilizando la condición de equilibrio en la componente vertical se tiene  
+\begin{align*}
+\sum F_{y} &=0\\
+\rightarrow F_{n}+2F\cos{22^{\circ}}-mg &=0\\
+\rightarrow F &= \dfrac{mg-F_{n}}{2\cos(22^{\circ})}\\
+\rightarrow F &= \dfrac{70(9,8)-\dfrac{70(9,8)}{2}}{2\cos(22^{\circ})}\\
+\rightarrow F &\approx 184,97\;N	
+\end{align*}
+\end{minipage}
+\end{enumerate}
+
+
+\begin{ejercicio}{}{}
+La aorta en los seres humanos tiene un diámetro de unos $2.0\;cm$, la sangre que pasa por ella, parte del reposo con respecto al cuerpo y tiene una velocidad de alrededor de $0,8\;m/s$ en la aorta. Si el bombeo toma $0.17\;s$. ¿Cuál es la magnitud de la fuerza promedio ejercida sobre los $80\;g$ de sangre, que son bombeados desde el corazón de una persona hacia la aorta durante cada latido del corazón?
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+Convirtiendo las unidades de masa, se tiene
+$$m=80\;g=0.08\;kg$$
+De esta manera
+$$F=m\cdot \dfrac{\Delta V}{\Delta t}=m\cdot \dfrac{V_f-V_i}{\Delta t}=0,08\left(\dfrac{0,8-0}{0,17}\right)\approx 0,376\;N$$
+
+
+\begin{ejercicio}{}{}
+Impacto contra el suelo. Una persona de $78,0\;kg$ cae en sentido vertical desde una altura de $1,60\;m$ (medida respecto de sus pies) y aterriza con su peso distribuido por igual entre ambos pies. Para amortiguar el golpe, esa persona flexiona las rodillas, de modo que tarda $0,750\;s$ en detenerse una vez que sus pies han tocado el suelo.
+\begin{enumerate}[a)]
+\item ¿Qué fuerza constante ejerce el suelo sobre cada pie mientras está deteniéndose?
+\item Ahora suponga que cae con las piernas rígidas y se detiene en solo 0,100 s. ¿Qué fuerza ejerce en este caso el suelo sobre cada pie?
+\item ¿En cuál de los dos casos es más probable que sufra lesiones?, ¿Por qué?
+\end{enumerate}
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+El movimiento es vertical, por tanto es posible utilizar $V_{f}^2=V_{oy}^2+2g\Delta y$, donde $V_{oy}=0$. Así
+$$V_{f}^2=2g(1,6)\approx 5,6\;m/s$$
+\begin{enumerate}[a)]
+\item Utilizando la segunda Ley de Newton, se tiene
+\begin{align*}
+\sum F_{y} &= ma\\
+\rightarrow W-2F &= m\left( \dfrac{V_{oy}-V_{fy}}{\Delta t}\right)	\\
+\rightarrow 2F &= W + \dfrac{m V_{fy}}{\Delta t}\\
+\rightarrow F &\approx 673,4\;N
+\end{align*}
+\item Utilizando $2F= W + \dfrac{m V_{fy}}{\Delta t}$ y considerando $\Delta t=0,100$ se tiene $F\approx 2566,2\;N$
+\item En el segundo caso (piernas rígidas). Puesto que el tiempo de interacción, entre el piso y las piernas, es menor, dando lugar al amortiguamiento que reduce la fuerza que reciben las piernas. A mayor prolongación del tiempo de interacción, mayor será el riesgo de sufrir lesiones
+\end{enumerate}
+
+
+\begin{ejercicio}{}{}
+Lesiones en una colisión. Al ser golpeado por detrás, un vehículo de $950\;kg$ que se encuentra en reposo acelera hasta $32\;km/h$ en $75\;ms$. Normalmente, la cabeza de una persona representa el 6,0\% de su peso corporal. 
+\begin{enumerate}[a)]
+\item Dibuje un diagrama de fuerzas para la cabeza de una persona de 65,0 kg durante la colisión, suponiendo que el asiento del vehículo no dispone de reposacabezas
+\item ¿Qué fuerza horizontal aplicada sobre la cabeza permitirá acelerarla junto con el resto del cuerpo? Exprese su respuesta en newtons y como múltiplo del peso de la cabeza. ¿Qué es lo que ejerce esta fuerza sobre la cabeza?
+\item ¿Terminará la cabeza acelerando junto con el resto del cuerpo?, ¿Por qué? ¿Qué es lo que hará en realidad?. Explique por qué esto puede provocar lesiones en el cuello
+\end{enumerate}
+\end{ejercicio}
+
+\underline{\textbf{Solución}}:
+
+\begin{enumerate}[a)]
+\item El DCL es
+\begin{center}
+\includegraphics[scale=2.8]{gph/dcl-11}	
+\end{center}
+\item Se sabe que $V_{f}=a\cdot t$, de donde 
+$$a=\dfrac{V_{f}}{t}= \dfrac{32}{75\times 10^{-3}}\approx 426,67\;m/s^2$$
+De esta manera, aplicando la segunda Ley de Newton, se tiene
+$$F=m\cdot a\approx 950(426,67)\approx 405336,5\;N$$
+Como $W=65(6\%)g\approx 38,22\;N$. Así $F=10605,35\;W$.
+La fuerza $F$ ejerce una presión (carga) sobre el cuello de la persona, empujándola hacia adelante, acelerando mas que el resto del cuerpo. 
+\item La cabeza no acelera, con la misma intensidad, que el resto del cuerpo. Puesto que afecta directamente al cuello y esta carga no se distribuye de forma equitativa sobre el resto del cuerpo.
+
+El cambio brusco, casi instantáneo, en el estado de inercia del cuerpo y en particular de la cabeza, provocará lesiones en el cuello.
+\end{enumerate}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

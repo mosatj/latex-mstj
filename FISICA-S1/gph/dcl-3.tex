@@ -1,0 +1,22 @@
+\documentclass[border=3pt]{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}%-stealth
+\draw[blue] (1.1,0) arc (0:60:1.2);
+\node[blue] at (1.35,0.4) {\footnotesize $60^{\circ}$};
+\draw[red] (0.5,0) arc (0:45:0.4);
+\node[red] at (0.75,0.25) {\footnotesize $45^{\circ}$};
+
+\draw[dashed] (-1,0) -- (3,0);
+
+\draw[-latex, very thick, blue](0,0) -- (1,2.226);
+\node[blue] at (0.5,2.1) {\footnotesize $140$};
+\draw[-latex, very thick, red](0,0) -- (3,2.373);
+\node[red] at (2.4,2.3) {\footnotesize $200$};
+\end{tikzpicture} 
+
+
+\end{document}

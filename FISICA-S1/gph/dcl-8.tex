@@ -1,0 +1,33 @@
+\documentclass[margin=2pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}%-stealth
+\draw[-latex, very thick, blue] (-0.2,0) -- (-2,0);
+\node[blue] at (-2,-0.3) {\footnotesize $400$};
+
+\draw[-latex, very thick, black] (-0.1,0.1) -- (-0.1,2.2);
+\node[black] at (-0.4,2) {\footnotesize $F_{n_1}$};
+\draw[-latex, very thick, black] (0.1,0.1) -- (0.1,2.2);
+\node[black] at (0.45,2) {\footnotesize $F_{n_2}$};
+
+\draw[-latex, very thick, red] (0.2,0) -- (2.5,0);
+\node[red] at (2.5,-0.3) {\footnotesize $480\cos(\theta)$};
+
+\draw[-latex, very thick, black] (-0.1,0) -- (-0.1,-2.2);
+\node[black] at (-0.5,-1.8) {\footnotesize $150g$};
+\draw[-latex, very thick, red] (0.1,0) -- (0.1,-2.2);
+\node[red] at (0.85,-1.8) {\footnotesize $480\sen(\theta)$};
+\end{tikzpicture} 
+
+
+\end{document}
+
+
+
+
